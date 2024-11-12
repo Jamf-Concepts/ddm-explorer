@@ -1,4 +1,7 @@
 Service Configuration is a critical compliance control for Apple devices.
+
 It allows you to precisely lockdown the behavior of low-level system services and daemons on your end user devices. For example, you are able to configure the behavior of the 'sshd' daemon which is responsible for handling inbound secure shell connections to the device. Whether you decide to disable the service completely or set a specific configuration that mandates how the daemon is configured, you are able to effectively control the behavior of these native system services that ship with the OS.
+
 This declaration allows system administrators to define a configuration file that will override any user-defined configuration on the device. This declaration doesn't define the configuration itself, instead it specifies an asset that defines the location of the configuration file, necessary authentication, and SHA-256 hash of the configuration file's content that must match for the device to accept the retrieved configuration.
+
 In addition to sshd control, service configurations are supported for bash and zsh local shell settings.
