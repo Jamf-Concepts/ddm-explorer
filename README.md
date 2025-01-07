@@ -18,7 +18,9 @@ Please note that this app is currently in beta and elements may changed, added o
 - [Declaration Components](#Declaration-Components)
 - [Explore & Build Declarations with DDM Explorer](#Explore-&-Build-Declarations-with-DDM-Explorer)
 - [Combine Components & Send Declaration to a Device (COMING SOON)](#Combine-Components-&-Send-Declaration-to-a-Device)
-- 
+- [Download (macOS & iPadOS)](#Download)
+
+
 ## What is DDM?
 Declarative Device Management (DDM) is a modern framework introduced by Apple to simplify and improve the way organizations manage Apple devices, such as iPhones, iPads, Macs, and Apple TVs. It uses a declarative model to apply and maintain configurations, settings, and policies on devices more efficiently than traditional management approaches.
 
@@ -63,6 +65,14 @@ Select all desired values from the drop-down menus and note the following:
 * An **Activation** and **Configuration** are required
 * Confirm the Declaration Channel matches the **Allowed Scope** of your components
 
-<img width="1624" alt="Screenshot 2025-01-07 at 5 47 00 PM" src="https://github.com/user-attachments/assets/02183161-c487-4213-8eb9-629ec93a9686" />
+<img width="1624" alt="DDM Explorer" src="https://github.com/user-attachments/assets/ca33eb1b-fc8b-4856-8bc7-f658dfb0a39c" />
+
+## Download
+Download DDM Explorer on the Apple App Store. Available for Mac and iPad.
+
+[![app_store svg](https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf)](https://apps.apple.com/app/ddm-explorer/id6677001018)
+
+
+
 
 
