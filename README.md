@@ -22,7 +22,7 @@ Please note that this app is currently in beta and elements may changed, added o
 
 
 ## What is DDM?
-Declarative Device Management (DDM) is a modern framework introduced by Apple to simplify and improve the way organizations manage Apple devices, such as iPhones, iPads, Macs, and Apple TVs. It uses a declarative model to apply and maintain configurations, settings, and policies on devices more efficiently than traditional management approaches.
+Declarative Device Management (DDM) is a modern framework introduced by Apple to simplify and improve the way organizations manage Apple devices. It uses a declarative model to apply and maintain configurations, settings, and policies on devices more efficiently than traditional management approaches.
 
 ### How Does It Work?
 * Traditional Management: Relies on commands sent from a server to enforce settings. Devices frequently contact the server to check for updates, leading to higher latency and server dependency.
@@ -64,6 +64,7 @@ After creating constituent components, combine them into a declaration and send 
 Select all desired values from the drop-down menus and note the following:
 * An **Activation** and **Configuration** are required
 * Confirm the Declaration Channel matches the **Allowed Scope** of your components
+* Make sure Jamf Pro is configured in **Settings** and that your test device's Jamf Pro Management ID is entered correctly
 
 <img width="1624" alt="DDM Explorer" src="https://github.com/user-attachments/assets/ca33eb1b-fc8b-4856-8bc7-f658dfb0a39c" />
 
