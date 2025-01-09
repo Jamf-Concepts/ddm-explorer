@@ -10,7 +10,7 @@ With DDM Explorer, you can explore every detail of Apple’s DDM components (inc
 
 Using the built-in declaration creator, build and save your DDM components directly within the app. In an upcoming release of DDM Explorer, you will be able to connect the app to Jamf Pro and test your declarations on enrolled devices.
 
-Please note that this app is currently in beta and elements may changed, added or removed at any point as Jamf 
+Please note that this app is currently in beta and elements may be changed, added or removed at any point.
 
 
 ## Table of Contents
@@ -29,21 +29,21 @@ Declarative Device Management (DDM) is a modern framework introduced by Apple to
 * DDM Approach: Devices are provided with declarations (descriptions of desired state or behavior) from a server. Devices interpret and apply these declarations locally, reducing server dependency and enabling faster responses to changes.
 
 ## Declaration Components
-Declarations are composed of multiple components and can be used to build complex workflows. The following are DDM components that can be build in DDM Explorer:
+Declarations are composed of multiple components and can be used to build complex workflows. The following are DDM components that can be built with DDM Explorer:
 
 | Component    | Description  | Example  |
 | ------------- | ------------- | ------------- |
-| Activation      | Activates specific configurations or other items based on device or user conditions. | A device activates a "Work Mode" configuration when the user logs in with a corporate account. Using the **Predicate** key, you can reference Status items (ex: OS version, device type, battery, etc.) to design your deployment requirements. |
-| Asset     | Represents reusable resources like wallpapers, certificates, app configurations and much more. | Define items such as corporate email accounts, wallpaper images or Wi-Fi profiles to deploy to all employee devices. |
-| Configuration | Defines settings or policies applied to devices. | Enforce configurations such as password requirements, disk management settings, software updates, background tasks, Safari extensions, to name a few. |
-| Management | Oversees and coordinates all the declarations and ensures devices receive the correct policies. | Assign different profiles based on user roles. |
-| Status | Tracks and reports the current state of the device back to the management system. | Report whether the device is compliant with the password policy. Status elements can be added to the Activation Predicate key. |
+| Activation      | Activates specific configurations or other items based on device or user conditions. | This might include conditions such as device type / model, OS version, FileVault status, installed apps, user accounts or background tasks. Using the **Predicate** key, you can reference **Status** items to design your deployment conditions. |
+| Asset     | Represents reusable resources or files. | Define items such as certificates, email accounts, wallpaper images, Wi-Fi profiles, app configurations or other files to deploy to devices. |
+| Configuration | Defines settings or policies applied to devices. | Enforce device configurations such as password requirements, disk management settings, software updates, background tasks, Safari extensions, etc. |
+| Management | Oversees and coordinates all the declarations and ensures devices receive the correct policies. | Acts as a container that defines what policies, configurations, or actions should apply to devices or users. |
+| Status | Tracks and reports the current state of the device back to the management system. | Report whether the device is compliant with the password policy. Status elements can be added to the **Activation Predicate** key. |
 
 
 ## Explore & Build Declarations with DDM Explorer
 To start building declaration components, click on an item in the sidebar or home view. Browse the keys and subkeys and use the declaration builder to create your JSON structure. When finsished, click Save at the bottom-right.
 
-Note that you must include a unique identifier in the Identifier field. You must reference this identifier in other declaration components when you construct and send declarations to devices. In the following example, the Activation references a saved configuration called `com.jamf.passcode`.
+Note that you must include a unique identifier in the Identifier field. You must reference this identifier in other declaration components when you construct and send declarations to devices. In the following example, the Activation references a saved configuration with an identifier of `com.jamf.passcode`.
 
 ```json
 {
