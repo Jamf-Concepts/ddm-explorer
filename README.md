@@ -16,8 +16,8 @@ Please note that this app is currently in beta and elements may be changed, adde
 ## Table of Contents
 - [What is DDM?](#What-is-DDM?)
 - [Declaration Components](#Declaration-Components)
-- [Explore & Build Declarations with DDM Explorer](#Explore-&-Build-Declarations-with-DDM-Explorer)
-- [Combine Components & Send Declaration to a Device (COMING SOON)](#Combine-Components-&-Send-Declaration-to-a-Device)
+- [Explore & Build Declarations with DDM Explorer](#Explore-and-Build-Declarations-with-DDM-Explorer)
+- [Combine Components & Send Declaration to a Device (COMING SOON)](#Combine-Components-and-Send-Declaration-to-a-Device)
 - [Download (macOS & iPadOS)](#Download)
 
 
@@ -40,7 +40,7 @@ Declarations are composed of multiple components and can be used to build comple
 | Status | Tracks and reports the current state of the device back to the management system. | Report whether the device is compliant with the password policy. Status elements can be added to the **Activation Predicate** key. |
 
 
-## Explore & Build Declarations with DDM Explorer
+## Explore and Build Declarations with DDM Explorer
 To start building declaration components, click on an item in the sidebar or home view. Browse the keys and subkeys and use the declaration builder to create your JSON structure. When finsished, click Save at the bottom-right.
 
 Note that you must include a unique identifier in the Identifier field. You must reference this identifier in other declaration components when you construct and send declarations to devices. In the following example, the Activation references a saved configuration with an identifier of `com.jamf.passcode`.
@@ -58,7 +58,7 @@ Note that you must include a unique identifier in the Identifier field. You must
 }
 ```
 
-## Combine Components & Send Declaration to a Device
+## Combine Components and Send Declaration to a Device
 After creating constituent components, combine them into a declaration and send them to a test device by cllicking Send Declaration on the home view or at the bottom-right of an Activation, Asset, Configuration, Management or Status view.
 
 Select all desired values from the drop-down menus and note the following:
