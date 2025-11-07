@@ -10,9 +10,6 @@ With DDM Explorer, you can explore every detail of Apple’s DDM components (inc
 
 Using the built-in declaration creator, build and save your DDM components directly within the app. In an upcoming release of DDM Explorer, you will be able to connect the app to Jamf Pro and test your declarations on enrolled devices.
 
-Please note that this app is currently in beta and elements may be changed, added or removed at any point.
-
-
 ## Table of Contents
 - [What is DDM?](#What-is-DDM?)
 - [Declaration Components](#Declaration-Components)
@@ -72,6 +69,7 @@ Select all desired values from the drop-down menus and note the following:
 Download DDM Explorer on the Apple App Store. Available for Mac and iPad.
 
 [![app_store svg](https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf)](https://apps.apple.com/app/ddm-explorer/id6677001018)
+
 
 
 
