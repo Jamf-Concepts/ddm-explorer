@@ -71,9 +71,4 @@ Select all desired values from the drop-down menus and note the following:
 ## Download
 Download DDM Explorer on the Apple App Store. Available for Mac and iPad.
 
-[![app_store svg](https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf)](https://apps.apple.com/app/ddm-explorer/id6677001018)
-
-
-
-
-
+[![app_store svg](https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf)](https://apps.apple.com/us/app/ddm-explorer/id6754861743)
