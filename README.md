@@ -1,78 +1,65 @@
-# DDM Explorer
+<img width="1279" height="802" alt="Explorer Home view" src="https://github.com/user-attachments/assets/6e1ed34e-f08e-41e4-9d53-e6f7297b8461" />
 
-Jamf DDM Explorer is an app that was built to help Jamf Pro administrators learn and understand how Apple’s powerful Declarative Device Management framework works. Additionally, you can build and test declarations on your own Jamf-enrolled devices **(COMING SOON)**.
+## DDM Explorer
+
+Jamf DDM Explorer is an app built to help IT administrators learn and understand Apple’s Declarative Device Management framework, allowing users to browse published declaration types compatible for both currently-shipping operating systems, as well as pre-release beta declarations published in available GitHub branches. Use this app for same-day declaration building as soon as documentation is released for available beta operating system versions.
+
+  <img width="1279" height="802" alt="Declaration Explorer view" src="https://github.com/user-attachments/assets/9e2203eb-ac2d-40bd-9261-35c90323e2f9" />
+
+Browse and build payloads in a brand-new Declaration Explorer editor for deployment as custom declarations to test devices, and deploy with your device management system for testing. All declaration objects are sourced directly from Apple’s GitHub, allowing for loading pre-release branch documentation, when available.
+
+<img width="1279" height="802" alt="Status Explorer view" src="https://github.com/user-attachments/assets/41a95c94-cac7-4f9b-b666-7965171d76a0" />
+
+Once declarations are deployed and activated, use the Status Explorer view to view your test device’s current declarative status reports, including available status subscriptions. Status documentation is also built in-line with the Status Explorer viewer for reference.
+
+Note: Features such as reading a test device’s status reports require an integration with Jamf Pro.
 
 ### Explore and Learn
 
-With DDM Explorer, you can explore every detail of Apple’s DDM components (including Activation, Asset, Configuration, Status and Management). All DDM framework data is retrieved directly from Apple’s GitHub and DDM Explorer allows you to explore non-release/beta branches when available.
+Use the Declaration Explorer view to browse available declarations and learn how they can be configured. DDM Explorer translates yaml data files into an easy-to-read browser, displaying information such as supported OS platform and version compatibility, enrollment types, and available scoping channels (System or User) for each given declaration type. 
+
+Additionally, each declaration's key structure is visually displayed to show the hierarchy of required keys and formatting, combined with additional details and descriptions pulled directly from Apple's documentation.
+
+Use the Status Explorer view to inspect device status information from your test device in Jamf Pro that was sent via declarative status subscriptions. View and inspect what type of data is possible to receive from managed devices using DDM status messages in the status browser, then compare that to live status data that's retrieved via the Jamf Pro API.
+
+When testing new and updated declarations against beta operating systems, it can be helpful to view and export this status data to include when filing Feedback with Apple or reporting issues with Jamf.
+
 
 ### Build and Test
 
-Using the built-in declaration creator, build and save your DDM components directly within the app. In an upcoming release of DDM Explorer, you will be able to connect the app to Jamf Pro and test your declarations on enrolled devices.
+The Declaration Explorer viewer is also a declaration editor, allowing you to add keys and values to a declaration, while letting the editor build the required JSON formatting. Easily add additional keys and array items within the editor, with inline guidance showing which keys are required in specific configurations. 
 
-Please note that this app is currently in beta and elements may be changed, added or removed at any point.
+As edits take place, view the Declaration Payload window and the JSON output displayed in real time to see the structure of the declaration object, then copy the payload data to deploy as a Custom Declaration to deploy and test with in Jamf Pro.
 
+**(COMING SOON)** Use Jamf Platform API integration to deploy declarations to test devices. 
 
-## Table of Contents
-- [What is DDM?](#What-is-DDM?)
-- [Declaration Components](#Declaration-Components)
-- [Explore & Build Declarations with DDM Explorer](#Explore-and-Build-Declarations-with-DDM-Explorer)
-- [Combine Components & Send Declaration to a Device (COMING SOON)](#Combine-Components-and-Send-Declaration-to-a-Device)
-- [Download (macOS & iPadOS)](#Download)
+Please note that this app is provided as-is and elements may be changed, added, or removed at any point. 
 
 
-## What is DDM?
-Declarative Device Management (DDM) is a modern framework introduced by Apple to simplify and improve the way organizations manage Apple devices. It uses a declarative model to apply and maintain configurations, settings, and policies on devices more efficiently than traditional management approaches.
+### Configure DDM Explorer for your environment
 
-### How Does It Work?
-* Traditional Management: Relies on commands sent from a server to enforce settings. Devices frequently contact the server to check for updates, leading to higher latency and server dependency.
-* DDM Approach: Devices are provided with declarations (descriptions of desired state or behavior) from a server. Devices interpret and apply these declarations locally, reducing server dependency and enabling faster responses to changes.
+You can choose which available GitHub documentation branch to explore and configure available Jamf API integrations in the Settings viewer. Apple's `release` branch is the default source, and beta documentation branches can be selected instead, when available.
 
-## Declaration Components
-Declarations are composed of multiple components and can be used to build complex workflows. The following are DDM components that can be built with DDM Explorer:
+#### Integrate with the Jamf Pro API
 
-| Component    | Description  | Example  |
-| ------------- | ------------- | ------------- |
-| Activation      | Activates specific configurations or other items based on device or user conditions. | This might include conditions such as device type / model, OS version, FileVault status, installed apps, user accounts or background tasks. Using the **Predicate** key, you can reference **Status** items to design your deployment conditions. |
-| Asset     | Represents reusable resources or files. | Define items such as certificates, email accounts, wallpaper images, Wi-Fi profiles, app configurations or other files to deploy to devices. |
-| Configuration | Defines settings or policies applied to devices. | Enforce device configurations such as password requirements, disk management settings, software updates, background tasks, Safari extensions, etc. |
-| Management | Oversees and coordinates all the declarations and ensures devices receive the correct policies. | Acts as a container that defines what policies, configurations, or actions should apply to devices or users. |
-| Status | Tracks and reports the current state of the device back to the management system. | Report whether the device is compliant with the password policy. Status elements can be added to the **Activation Predicate** key. |
+The Status Explorer allows you to view the full status reports of the latest data reported to Jamf Pro from a specific test device. Use the Settings viewer to configure this integration, using either Username & Password credentials or an API Client & Secret for authentication.
 
+Required permissions for this API access are:
+- `Read Computers`
+- `Read Mobile Devices`
 
-## Explore and Build Declarations with DDM Explorer
-To start building declaration components, click on an item in the sidebar or home view. Browse the keys and subkeys and use the declaration builder to create your JSON structure. When finsished, click Save at the bottom-right.
+Enter your full server URL, such as `https://YOURSERVER.jamfcloud.com`.
+Enter your test device's Jamf Pro Management ID value, (i.e. `c2682b69-4073-499f-a024-bf583d26a78c`).
 
-Note that you must include a unique identifier in the Identifier field. You must reference this identifier in other declaration components when you construct and send declarations to devices. In the following example, the Activation references a saved configuration with an identifier of `com.jamf.passcode`.
+#### Deploy test declarations with a Custom Declarations component in blueprints
 
-```json
-{
-  "type" : "com.apple.activation.simple",
-  "id" : "com.jamf.activation.predicate.mac",
-  "payload" : {
-    "StandardConfigurations" : [
-      "com.jamf.passcode"
-    ],
-    "Predicate" : "(@status(device.model.family) == 'Mac')"
-  }
-}
-```
+Once a declaration payload is built, the JSON contents can be copied and deployed as a custom declaration in blueprints. See Jamf documentation for more information: [Creating a Custom Declaration Blueprint](https://learn.jamf.com/r/1wMrPGpTfIhzefOZY1loHg/zmGXeA6z6wrw3zw2G5mLhw)
 
-## Combine Components and Send Declaration to a Device
-After creating constituent components, combine them into a declaration and send them to a test device by cllicking Send Declaration on the home view or at the bottom-right of an Activation, Asset, Configuration, Management or Status view.
-
-Select all desired values from the drop-down menus and note the following:
-* An **Activation** and **Configuration** are required
-* Confirm the Declaration Channel matches the **Allowed Scope** of your components
-* Make sure Jamf Pro is configured in **Settings** and that your test device's Jamf Pro Management ID is entered correctly
-
-<img width="1624" alt="DDM Explorer" src="https://github.com/user-attachments/assets/ca33eb1b-fc8b-4856-8bc7-f658dfb0a39c" />
 
 ## Download
-Download DDM Explorer on the Apple App Store. Available for Mac and iPad.
+Download DDM Explorer on the App Store. Available for Mac and iPad.
 
 [![app_store svg](https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf)](https://apps.apple.com/app/ddm-explorer/id6677001018)
-
 
 
 
