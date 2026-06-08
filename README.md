@@ -1,18 +1,26 @@
-<img width="1279" height="802" alt="Explorer Home view" src="https://github.com/user-attachments/assets/6e1ed34e-f08e-41e4-9d53-e6f7297b8461" />
-
 ## DDM Explorer
 
-Jamf DDM Explorer is an app built to help IT administrators learn and understand Apple’s Declarative Device Management framework, allowing users to browse published declaration types compatible for both currently-shipping operating systems, as well as pre-release beta declarations published in available GitHub branches. Use this app for same-day declaration building as soon as documentation is released for available beta operating system versions.
+<p align="center">
+  <a href="https://apps.apple.com/app/ddm-explorer/id6677001018">
+    <img src="https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf" alt="Download on the App Store" width="180" />
+  </a>
+  <br/>
+  <em>Available for Mac and iPad</em>
+</p>
+
+<img width="1279" height="802" alt="Explorer Home view" src="https://github.com/user-attachments/assets/6e1ed34e-f08e-41e4-9d53-e6f7297b8461" />
+
+Jamf DDM Explorer is an app built to help IT administrators learn and understand Apple's Declarative Device Management framework, allowing users to browse published declaration types compatible for both currently-shipping operating systems, as well as pre-release beta declarations published in available GitHub branches. Use this app for same-day declaration building as soon as documentation is released for available beta operating system versions.
 
   <img width="1279" height="802" alt="Declaration Explorer view" src="https://github.com/user-attachments/assets/9e2203eb-ac2d-40bd-9261-35c90323e2f9" />
 
-Browse and build payloads in a brand-new Declaration Explorer editor for deployment as custom declarations to test devices, and deploy with your device management system for testing. All declaration objects are sourced directly from Apple’s GitHub, allowing for loading pre-release branch documentation, when available.
+Browse and build payloads in a brand-new Declaration Explorer editor for deployment as custom declarations to test devices, and deploy with your device management system for testing. All declaration objects are sourced directly from Apple's GitHub, allowing for loading pre-release branch documentation, when available.
 
 <img width="1279" height="802" alt="Status Explorer view" src="https://github.com/user-attachments/assets/41a95c94-cac7-4f9b-b666-7965171d76a0" />
 
-Once declarations are deployed and activated, use the Status Explorer view to view your test device’s current declarative status reports, including available status subscriptions. Status documentation is also built in-line with the Status Explorer viewer for reference.
+Once declarations are deployed and activated, use the Status Explorer view to view your test device's current declarative status reports, including available status subscriptions. Status documentation is also built in-line with the Status Explorer viewer for reference.
 
-Note: Features such as reading a test device’s status reports require an integration with Jamf Pro.
+Note: Features such as reading a test device's status reports require an integration with Jamf Pro.
 
 ### Explore and Learn
 
@@ -57,10 +65,4 @@ Once a declaration payload is built, the JSON contents can be copied and deploye
 
 
 ## Download
-Download DDM Explorer on the App Store. Available for Mac and iPad.
-
-[![app_store svg](https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf)](https://apps.apple.com/app/ddm-explorer/id6677001018)
-
-
-
-
+Download DDM Explorer on the [App Store](https://apps.apple.com/app/ddm-explorer/id6677001018). Available for Mac and iPad.
