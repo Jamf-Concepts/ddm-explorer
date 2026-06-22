@@ -1,7 +1,7 @@
 ## DDM Explorer
 
 <p align="center">
-  <a href="https://apps.apple.com/app/ddm-explorer/id6677001018">
+  <a href="https://apps.apple.com/app/ddm-explorer/id6754861743">
     <img src="https://github.com/user-attachments/assets/eec5de86-703d-444d-9785-027e315e8ddf" alt="Download on the App Store" width="180" />
   </a>
   <br/>
